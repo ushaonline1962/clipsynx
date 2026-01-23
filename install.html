@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ClipSynx – Get the App</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script>
+    window.onload = function () {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+      const androidLink =
+        "https://play.google.com/store/apps/details?id=com.socialmediaposting.clipsynx";
+
+      const webLink =
+        "https://play.google.com/apps/testing/com.socialmediaposting.clipsynx";
+
+      // 📱 Android devices
+      if (/android/i.test(ua)) {
+        window.location.replace(androidLink);
+      }
+      // 💻 Desktop / Laptop
+      else {
+        window.location.replace(webLink);
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <!-- Fallback UI (important for blocked redirects) -->
+  <div style="text-align:center; margin-top:40vh;">
+    <h2>Redirecting to ClipSynx 🚀</h2>
+    <p>If you are not redirected automatically, click below.</p>
+
+    <a
+      href="https://play.google.com/store/apps/details?id=com.socialmediaposting.clipsynx"
+      style="
+        display:inline-block;
+        padding:12px 24px;
+        background:#000;
+        color:#fff;
+        text-decoration:none;
+        border-radius:6px;
+        font-weight:600;
+      "
+    >
+      Open Play Store
+    </a>
+  </div>
+</body>
+</html>
